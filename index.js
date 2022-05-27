@@ -71,7 +71,7 @@ const start = () => {
     const data = msg.data;
     const chatId = msg.message.chat.id;
 
-    if (data === chats[chatId]) {
+    if (parseInt(data) === chats[chatId]) {
       return bot.sendMessage(
         chatId,
         `Ахуеть, красавчик, угадал цифру ${chats[chatId]}`,
